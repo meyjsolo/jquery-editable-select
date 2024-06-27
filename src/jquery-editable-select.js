@@ -95,7 +95,8 @@
 		}
 		this.utility.setAttributes($li, attrs, data);
 		this.utility.setAttributes($option, attrs, data);
-		this.filter();
+		// remove filter if you do not need to modify options dynamically, and you will get high performance for initialize
+		// this.filter();
 	};
 	EditableSelect.prototype.remove = function (index) {
 		var last = this.$list.find('li').length;
